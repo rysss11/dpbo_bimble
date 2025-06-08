@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class Registrasi {
 	private static int i = 1;
+	private Student student;
 	private String idRegistrasi;
 	private String namaLengkap;
 	private Date tanggalLahir;
@@ -16,11 +17,12 @@ public class Registrasi {
 	private String metodePembayaran;
 	private boolean konfirmasi;
 
-	public Registrasi(String namaLengkap, Date tanggalLahir,
+	public Registrasi(Student student, String namaLengkap, Date tanggalLahir,
 			String jenisKelamin, String alamat, String noHp, String email, String namaWali, String noHpWali,
 			String metodePembayaran) {
 		this.idRegistrasi = "BRI-"+i;
 		i++;
+		this.student = student;
 		this.namaLengkap = namaLengkap;
 		this.tanggalLahir = tanggalLahir;
 		this.jenisKelamin = jenisKelamin;
@@ -36,6 +38,11 @@ public class Registrasi {
 		this.konfirmasi = false;
 	}
 
+	
+	public Student getStudent() {
+	    return student;
+	}
+	
 	public String getIdRegistrasi() {
 		return idRegistrasi;
 	}
