@@ -47,5 +47,5 @@ public abstract class User {
 	
 	public abstract void login();
 	public abstract void logout();
-	public abstract void register();
+	public abstract Registrasi registrasi();
 }
