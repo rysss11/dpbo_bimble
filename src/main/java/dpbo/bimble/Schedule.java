@@ -1,13 +1,15 @@
 package dpbo.bimble;
-import java.util.Date;
+
+import java.util.List;
+
 public class Schedule {
 	private String subject;
-	private Date date;
+	private String date;
 	private String startTime;
 	private String endTime;
 	private String room;
 
-	public Schedule(String subject, Date date, String startTime, String endTime, String room) {
+	public Schedule(String subject, String date, String startTime, String endTime, String room) {
 		this.subject = subject;
 		this.date = date;
 		this.startTime = startTime;
@@ -19,7 +21,7 @@ public class Schedule {
 		return subject;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
@@ -35,7 +37,7 @@ public class Schedule {
 		return room;
 	}
 
-	public void setSchedule(Admin admin, String subject, Date date, String startTime, String endTime, String room) {
+	public void setSchedule(Admin admin, String subject, String date, String startTime, String endTime, String room) {
 		if (admin == null) {
 			System.out.println("Akses ditolak: hanya Admin yang bisa mengubah jadwal.");
 			return;
@@ -54,6 +56,5 @@ public class Schedule {
 		System.out.println("Date    : " + date);
 		System.out.println("Time    : " + startTime + " - " + endTime);
 		System.out.println("Room    : " + room);
-		System.out.println("================================");
 	}
 }
